@@ -32,10 +32,14 @@
         for (key in styles) {
           el.style[key] = styles[key];
         }
+        el.className = 'stuck'
+        document.body.className = 'el-stuck'
       } else {
         for (key in originalStyles) {
           el.style[key] = originalStyles[key];
         }
+        el.className = 'not-stuck'
+        document.body.className = 'el-not-stuck'
       }
       onscroll && onscroll(event)
     }
